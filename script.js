@@ -1,9 +1,3 @@
-const products = [
-    { id: 1, name: "Smart Watch", price: 199.99, image: "./images/watch.png" },
-    { id: 2, name: "Wireless Earbuds", price: 129.99, image: "./images/earbud.png" },
-    { id: 3, name: "Tracker", price: 89.99, image: "./images/tracker.jpg" },
-    { id: 4, name: "Smart Speaker", price: 79.99, image: "./images/speaker.jpg" },
-];
 
 const productList = document.getElementById("product-list");
 const cartIcon = document.getElementById("cart-icon");
@@ -19,6 +13,18 @@ const showProductsBtn = document.getElementById("show-products-btn");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 updateCart()
+
+
+let products = [];
+
+fetch('products.json')
+.then(response => response.json())
+.then(data => {
+    products = data;
+    renderProducts();
+})
+.catch(error => console.error('Error al cargar los productos:', error));
+
 
 function renderProducts() {
     productList.innerHTML = '';

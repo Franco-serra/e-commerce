@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Smart Watch",
+        "price": 199.99,
+        "image": "./images/watch.png"
+    },
+    {
+        "id": 2,
+        "name": "Wireless Earbuds",
+        "price": 129.99,
+        "image": "./images/earbud.png"
+    },
+    {
+        "id": 3,
+        "name": "Tracker",
+        "price": 89.99,
+        "image": "./images/tracker.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Smart Speaker",
+        "price": 79.99,
+        "image": "./images/speaker.jpg"
+    }
+]
